@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung dung chuyen doi tien te</title>
+</head>
+<body>
+    <table  style="width: 800px">
+        <tr style="font-weight: bold" align="center">
+            <td >Amount</td>
+            <td>From Currency</td>
+            <td>To Currency</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="amount"></td>
+            <td align="center">
+                <select style="width: 100px" id="from">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td align="center">
+                <select style="width: 100px" id="to">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td><button onclick="changemoney()">Convert!</button></td>
+        </tr>
+        <P id="result Division"></P>
+    </table>
+<script>
+    function changemoney() {
+        let amount = document.getElementById("amount").value
+        let from = document.getElementById("from").value
+        let to = document.getElementById("to").value
+        let result;
+
+        if (from == "USD" && to == "VND") {
+            result = "Result Division: " + (amount*23000) + " Đ"
+        }
+        else if (from == "VND" && to == "USD") {
+            result = "Result Division: " + (amount/23000) + " $"
+        }
+        else if (from == "VND" && to == "VND") {
+            result = "Result Division: " + amount + " Đ"
+        }
+        else {
+            result = "Result Division: " + amount + " $"
+        }
+        document.getElementById("result Division").innerHTML = result;
+    }
+</script>
+</body>
+</html>

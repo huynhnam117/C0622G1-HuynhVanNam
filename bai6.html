@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nhap diem cua mot sinh vien </title>
+</head>
+<body>
+    <script>
+        diemvatlinhap = prompt("nhập điểm vật lí: ")
+        diemhoahocnhap = prompt("nhập điểm hoá học: ")
+        diemsinhhocnhap = prompt("nhập điểm sinh hoc:")
+
+        let diemvatli = parseInt(diemvatlinhap);
+        let diemhoahoc = parseInt(diemhoahocnhap);
+        let diemsinhhoc = parseInt(diemsinhhocnhap);
+
+        let tongdiem = (diemvatli + diemhoahoc + diemsinhhoc);
+        let diemtrungbinh = (tongdiem / 3);
+
+        document.write("điểm trung bình là: " + diemtrungbinh);
+        document.write( "<br>" )
+        document.write("tổng điểm là: " + tongdiem);
+
+    </script>
+</body>
+</html>
