@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuong trinh gia dien</title>
+</head>
+<body>
+    <script>
+        let soDien = prompt('Nhập số điện tiêu thụ (kWh)\n' +
+            'Bậc 1 (0 đến 50kWh): 1.678 đồng/kWh\n' +
+            'Bậc 2 (51 đến 200 kWh): 2.014 đồng/kWh\n' +
+            'Bậc 3 (201 kWh trở lên): 2.927 đồng/kWh');
+        let soTien = 0;
+        if (soDien <= 50) {
+            soTien = soDien * 1.678;
+        } else if (soDien <= 200) {
+            soTien = 50 * 1.678 + (soDien - 50) * 2.014;
+        } else {
+            soTien = 50 * 1.678 + 150 * 2.014 + (soDien - 200) * 2.927;
+        }
+        alert('Số tiền phải trả = ' + soTien.toFixed(3));
+    </script>
+</body>
+</html>
