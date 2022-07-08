@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai1</title>
+</head>
+<body>
+    <h1>chuyển đổi nhiệt độ </h1>
+   <p>nhập nhiệt độ <input type="text" id="doC"></p>
+   <button onclick="kiemtra()">Kiểm tra</button>
+   <p id="nhietdo"></p>
+
+    <script>
+       function kiemtra() {
+            let doC = parseFloat(document.getElementById("doC").value);
+            let doF;
+            doF = (doC * 9/5 + 32);
+            document.getElementById("nhietdo").innerHTML = "hiển thị đọ F" + doF
+       }
+    </script>
+</body>
+</html>

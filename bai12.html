@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh chi so can nang </title>
+</head>
+<body align="center">
+    <h1>Chỉ số cân nặng</h1>
+    <span>
+        <h4>
+        <p>Nhập cân nặng: (kg)<input type="text" size="25px" placeholder="nhap can nang" id="cannang"></p>
+        
+       </h4>
+      
+    </span>
+    <span>
+        <h4>
+            <p>Nhập chiều cao: (m) <input type="text" size="25" placeholder="nhap chieu cao" id="chieucao"></p>
+        </h4>
+    </span>
+    <button onclick="kiemtra()">Kiểm Tra</button>
+    <p id="health"></p>
+</body>
+<script>
+    function kiemtra(){
+        let cannang = parseInt(document.getElementById("cannang").value);
+        let chieucao = parseFloat(document.getElementById("chieucao").value);
+        let health = cannang / ( chieucao * chieucao);
+        
+        if (health < 18.5){
+          document.getElementById("health").innerHTML = "bạn ốm quá";
+        }else if (health < 25.0) {
+            document.getElementById("health").innerHTML = "Béo cấp 1";
+        }else if (health < 30.0) {
+            document.getElementById("health").innerHTML = "Béo cấp 2";
+        }else{
+            document.getElementById("health").innerHTML = "mập lắm";
+        }
+
+        
+    }
+    
+</script>
+</html>

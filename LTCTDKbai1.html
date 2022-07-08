@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai1</title>
+</head>
+<body>
+  <p>Nhập a<input type="text" id="a"></p>
+  <p>Nhập b<input type="text" id="b"></p>
+
+  <button onclick="kiemtra()">Kiểm Tra</button>
+  <p id="chiahet"></p>
+</body>
+<script>
+    function kiemtra() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let chiahet = ( a% b ==0 );
+
+        if (chiahet % b){
+            document.getElementById("chiahet").innerHTML = " Có chia hết";
+        }else{
+            document.getElementById("chiahet").innerHTML = "Không chia hết"
+        }
+    }
+</script>
+</html>

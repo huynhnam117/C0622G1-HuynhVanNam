@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May tinh don gian</title>
+</head>
+<body>
+    <table>
+        
+            <td colspan="4"><input type="text" id="nhap"></td>
+        
+        <tr>
+            <td><button onclick="nhap(this.value)" value="1">1</button></td>
+            <td><button onclick="nhap(this.value)" value="2">2</button></td>
+            <td><button onclick="nhap(this.value)" value="3">3</button></td>
+            <td><button onclick="nhap(this.value)" value="+">+</button></td>
+           
+        </tr>
+        <tr>
+            <td><button onclick="nhap(this.value)" value="4">4</button></td>
+            <td><button onclick="nhap(this.value)" value="5">5</button></td>
+            <td><button onclick="nhap(this.value)" value="6">6</button></td>
+            <td><button onclick="nhap(this.value)" value="-">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="nhap(this.value)" value="4">7</button></td>
+            <td><button onclick="nhap(this.value)" value="5">8</button></td>
+            <td><button onclick="nhap(this.value)" value="6">9</button></td>
+            <td><button onclick="nhap(this.value)" value="-">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="xoa()" value="c">c</button></td>
+            <td><button onclick="bang()" value="=">=</button></td>
+           
+            <td><button onclick="nhap(this.value)" value="0">0</button></td>
+            <td><button onclick="nhap(this.value)" value="/">/</button></td>
+        </tr>
+    </table>
+    <script>
+    
+       function nhap(duLieu) {
+           let str = document.getElementById("nhap").value;
+            document.getElementById("nhap").value = str+ duLieu;
+       }
+       function bang() {
+           let str = document.getElementById("nhap").value;
+           let ketQua = eval(str);
+           document.getElementById("nhap").value = ketQua;
+       }
+       function xoa() {
+           document.getElementById("nhap").value="";
+       }
+    </script>
+</body>
+</html>

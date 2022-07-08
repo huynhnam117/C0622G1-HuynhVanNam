@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <img src="trump1.png" id="img1" style="height: 100%;width: 100%;" onclick="changeImg(1)" alt="">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="kim2.png" id="img2" style="height: 100%;width: 100%;" onclick="changeImg(2)" alt="">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="tap3.png" id="img3" style="height: 100%;width: 100%;" onclick="changeImg(3)" alt="">
+        </td>
+    </tr>
+</table>
+
+</body>
+<script>
+    let objImg1 = document.getElementById("img1");
+    let objImg2 = document.getElementById("img2");
+    let objImg3 = document.getElementById("img3");
+
+    function changeImg(value) {
+        let srcImg1 = objImg1.getAttribute("src");
+        let srcImg2 = objImg2.getAttribute("src");
+        let srcImg3 = objImg3.getAttribute("src");
+        switch (value) {
+            case 1:
+                if (srcImg1 === "trump1.png") {
+                    objImg1.src = "kim1.png";
+                } else if (srcImg1 === "kim1.png") {
+                    objImg1.src = "tap1.png"
+                } else {
+                    objImg1.src = "trump1.png"
+                }
+                break;
+            case 2:
+                if (srcImg2 === "trump2.png") {
+                    objImg2.src = "kim2.png";
+                } else if (srcImg2 === "kim2.png") {
+                    objImg2.src = "tap2.png"
+                } else {
+                    objImg2.src = "trump2.png"
+                }
+                break;
+            case 3:
+                if (srcImg3 === "trump3.png") {
+                    objImg3.src = "kim3.png";
+                } else if (srcImg3 === "kim3.png") {
+                    objImg3.src = "tap3.png"
+                } else {
+                    objImg3.src = "trump3.png"
+                }
+                break;
+        }
+        checkResult();
+    }
+
+    function checkResult() {
+        if(objImg1.getAttribute("src") === "trump1.png" && objImg2.getAttribute("src") === "trump2.png" && objImg3.getAttribute("src") === "trump3.png"){
+            objImg1.style.border = "4px red solid";
+            objImg2.style.border = "4px red solid";
+            objImg3.style.border = "4px red solid";
+        }else if(objImg1.getAttribute("src") === "kim1.png" && objImg2.getAttribute("src") === "kim2.png" && objImg3.getAttribute("src") === "kim3.png"){
+            objImg1.style.border = "4px red solid";
+            objImg2.style.border = "4px red solid";
+            objImg3.style.border = "4px red solid";
+        }else if(objImg1.getAttribute("src") === "tap1.png" && objImg2.getAttribute("src") === "tap2.png" && objImg3.getAttribute("src") === "tap3.png") {
+            objImg1.style.border = "4px red solid";
+            objImg2.style.border = "4px red solid";
+            objImg3.style.border = "4px red solid";
+        }else {
+            objImg1.style.border = "4px white solid";
+            objImg2.style.border = "4px white solid";
+            objImg3.style.border = "4px white solid";
+        }
+    }
+</script>
+</html>

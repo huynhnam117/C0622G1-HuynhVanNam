@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai5</title>
+</head>
+<body>
+    
+    <script>
+      let diemkiemtra = parseFloat(prompt("nhập điểm kiểm tra"));
+      let diemthigiuaky = parseFloat(prompt("nhập điểm thi giữa kì"));
+      let diemthicuoiky = parseFloat(prompt("nhập điểm cuối kỳ"));
+      let diemtongket = (diemkiemtra * 0,25) + (diemthigiuaky * 0.5) + (diemthicuoiky * 0.75 / 3);
+
+      if(diemtongket > 8.5) {
+          alert("Học sinh giỏi");
+      }else if(diemtongket > 6.5) {
+          alert("Học sinh khá");
+      }else if(diemtongket < 6){
+          alert("Học sinh trung bình");
+      }else if(diemtongket < 5){
+          alert("Học sinh yếu");
+      }else{
+          alert("Thi lại ")
+      }
+    </script>
+</body>
+</html>
