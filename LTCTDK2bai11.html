@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thue thu nhap ca nhan</title>
+</head>
+<body>
+    <script>
+        let tienThuNhapCaNhan = parseFloat(prompt("Nhập số tiền lương (vnđ))",""));
+            if (tienThuNhapCaNhan < 10000000){
+                alert("Tiền thuế phải trả là 5% "+ tienThuNhapCaNhan*0.05);
+            }else if (tienThuNhapCaNhan > 10000000 && tienThuNhapCaNhan < 30000000){
+                alert("Tiền thuế phải trả là 10% "+ tienThuNhapCaNhan*0.1);
+            }else {
+                alert("Tiền thuế phải trả là 20% "+ tienThuNhapCaNhan*0.2);
+            }
+    </script>
+</body>
+</html>

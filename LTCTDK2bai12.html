@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lai ngan hang</title>
+</head>
+<body>
+    <script>
+        let soTienVay = parseFloat(prompt("Nhập số tiền vay ",""));
+        let laiSuatHangThang = soTienVay * 0.12/12 ;
+        let soTienPhaiTraHangThang = soTienVay/12 + 1000000;
+            if (soTienVay>50000000){
+                alert("Lãi suất hàng tháng " + laiSuatHangThang.toFixed(3))
+                alert("Số tiền phải trả hàng tháng " + soTienPhaiTraHangThang.toFixed(3))
+            }else if (soTienVay<50000000){
+                alert("Lãi suất hàng tháng " + laiSuatHangThang.toFixed(3))
+                alert("Số tiền phải trả hàng tháng " + soTienPhaiTraHangThang.toFixed(3))
+            }
+    </script>
+</body>
+</html>
