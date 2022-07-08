@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai7</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("nhập số a"));
+        let b = parseFloat(prompt("nhập số b"));
+        let c = parseFloat(prompt("nhập số c"));
+        let detTa = (b*b)-4*a*c;
+
+        if(detTa < 0){
+            alert("phương trình vô nghiệm" + detTa)
+        }else if(detTa == 0){
+            alert("phương trình có nghiệm kép" + -b/a)
+        }else if(detTa > 0){
+            alert("phương trình có 2 nghiệm")
+        }
+
+    </script>
+</body>
+</html>

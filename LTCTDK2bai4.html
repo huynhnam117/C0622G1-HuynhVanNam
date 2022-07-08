@@ -7,6 +7,20 @@
     <title>bai4</title>
 </head>
 <body>
-    
+    <h1>Diện tích hình chữ nhật 2 cạnh kề</h1>
+    <p>Nhập a <input type="text" id="a"></p>
+    <p>Nhập b <input type="text" id="b"></p>
+    <button onclick="check()">Check</button>
+    <p id="kiemtra"></p>
+    <script>
+
+       function check() {
+           let a = parseInt(document.getElementById("a").value);
+           let b = parseInt(document.getElementById("b").value);
+           let s;
+               s = ( a * b);
+           document.getElementById("kiemtra").innerHTML = "Kết quả là: " + s;
+       }
+    </script>
 </body>
 </html>

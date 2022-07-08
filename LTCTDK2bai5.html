@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai5</title>
+</head>
+<body>
+    <h1>Diện tích tam giác vuông 2 cạnh</h1>
+    <p>Nhập a<input type="text" id="a"></p>
+    <p>Nhập b<input type="text" id="b"></p>
+    <button onclick="check()">Check</button>
+    <p id="kiemtra"></p>
+</body>
+<script>
+    function check(){
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let s;
+        s = (a * b /2);
+        document.getElementById("kiemtra").innerHTML = "hiện ra kết quả" + s;
+    }
+</script>
+</html>

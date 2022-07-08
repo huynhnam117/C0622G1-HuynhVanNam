@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai6</title>
+</head>
+<body>
+    <h1>Phương trình bật 1</h1>
+    <p>Nhập a<input type="text" id="a"></p>
+    <p>Nhập b<input type="text" id="b"></p>
+    <button onclick="check()">Check</button>
+    <p id="kiemtra"></p>
+</body>
+<script>
+    function check(){
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let x;
+        x = (-b / a);
+        if (a == 0 && b == 0){
+            alert("Phương trình có vô số nghiệm");
+        }else if(a == 0 && b != 0 ){
+            alert("phương trình vô nghiệm");
+        }else if(b == 0 && a != 0){
+            alert("phương trình vô nghiệm");
+        }else{
+            alert("phương trình có một nghiệm");
+        }
+
+        }
+    
+</script>
+</html>
