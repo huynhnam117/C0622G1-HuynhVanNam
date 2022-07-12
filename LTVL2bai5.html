@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai5</title>
+</head>
+<body>
+    <script>
+        let soThangChoVay = parseFloat(+prompt("Nhập số tiền: "));
+        let laiSuatHangThang = soThangChoVay * 0.24/12;
+        let soTienPhaiTra = soThangChoVay / 12 + 2000000;
+        
+        while (soThangChoVay > 60000000) {
+                alert("Lãi suất hàng tháng " + laiSuatHangThang.toFixed(3));
+                alert("Số tiền phải trả " + soTienPhaiTra.toFixed(3));
+
+            }if (soThangChoVay < 60000000) {
+                alert("Lãi suất hàng tháng " + laiSuatHangThang.toFixed(3));
+                alert("Số tiền phải trả " + soTienPhaiTra.toFixed(3));
+            }
+
+    </script>
+</body>
+</html>

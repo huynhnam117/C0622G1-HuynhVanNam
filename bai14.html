@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinh bang cuu chuong</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid rgb(11, 12, 12);
+        }
+        td{
+            border: 1px solid rgb(4, 4, 4);
+            padding: 8px;
+        }
+
+    </style>
+</head>
+<body align="center">
+    <h1>Bảng cửu chương </h1>
+    <div id="display"></div>
+</body>
+<script>
+   
+    let number = 0;
+    let source = " ";
+
+    for(let i = 1; i <= 10; i++) {
+        if(i == 1){
+            source += '<table>';
+        }
+        source += '<tr>';
+            for(let j = 2; j < 10; j ++) {
+                source +=`<td>${j} x ${i} = ${j * i}</td>`;
+            }
+        source+= '</tr>';
+        if(i == 10) {
+            source += '</table>';
+        }
+    }
+
+    document.getElementById('display').innerHTML = source;
+</script>
+</html>

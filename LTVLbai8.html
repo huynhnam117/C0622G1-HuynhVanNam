@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai8</title>
+</head>
+<body>
+    <button onclick="batDau()">Bắt đầu</button>
+<script>
+    function batDau() {
+        let i = 1;
+        soLonNhat = +prompt("Số lớn nhất trong khoảng bạn muốn đoán là : ");
+        soNgauNhien = Math.floor(Math.random() * soLonNhat);
+        soNguoiDungDoan = +prompt("Nhập số mà bạn đoán vào đây, lần" + " " + i);
+        console.log(soNgauNhien);
+
+        while (true) {
+            if (soNguoiDungDoan === soNgauNhien) {
+                alert("Chúc mừng bạn đã đoán đúng . ");
+                break;
+            } else if (soNguoiDungDoan > soNgauNhien) {
+                alert("Bạn đoán sai rồi , số này nhỏ hơn á");
+                i = i + 1;
+                soNguoiDungDoan = +prompt("Nhập số mà anh bạn đoán vào đây, lần" + " " + i);
+                if (i === 3) {
+                    alert("Kết thúc rồi nè , đoán sai 3 lần rồi nè");
+                    break;
+                }
+                continue;
+            } else if (soNguoiDungDoan < soNgauNhien) {
+                alert("Bạn đoán sai rồi , số này lớn hơn á");
+                i = i + 1;
+                soNguoiDungDoan = +prompt("Nhập số mà anh bạn đoán vào đây, lần" + " " + i);
+                if (i === 3) {
+                    alert("Kết thúc rồi nè , đoán sai 3 lần rồi nè ");
+                    break;
+                }
+                continue;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
