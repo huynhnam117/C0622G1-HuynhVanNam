@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Dien</title>
+</head>
+<body>
+    <h1>Từ Điển</h1>
+    <h4>
+       <span>Nhập từ:</span>
+        <input type="text" placeholder="Nhap" id="anhViet">
+        <button onclick="timKiem()"> id</button>
+        <p id="chuyen"></p>
+    </h4>
+</body>
+<script>
+   function timKiem(){
+       let arr_eng = ["how", "banana", "mango", "car", "tomato", "Flower"];
+       let arr_vie = ["thế nào", "chuối", "xoài", "xe", "cà chua", "hoa"];
+       let chuyen = document.getElementById("anhViet").value;
+
+       
+        if((arr_eng.indexOf(chuyen)) !== -1) {
+            document.getElementById("chuyen").innerHTML = (arr_vie[arr_eng.indexOf(chuyen)]);
+        }else{
+            document.getElementById("chuyen").innerHTML = (" Không có ");
+        }
+
+        }
+     
+
+       
+   
+</script>
+</html>

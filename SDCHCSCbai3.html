@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai3</title>
+</head>
+<body>
+   <script>
+      let fullName = prompt("Enter: ");
+let result = "";
+
+for(let word of fullName) {
+    if(word == word.toUpperCase()) {
+        result += word.toLowerCase();
+    } else{
+        result += word.toUpperCase();
+    }
+}
+document.write(fullName + '<br>');
+document.write(result);
+   </script>
+</body>
+</html>
