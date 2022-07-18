@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</title>
+</head>
+<body>
+    <script>
+       
+        function arae(ban_kinh) {
+            ban_kinh = +prompt("nhập vào bán kinh");
+            const PI = Math.PI;
+           let dientich = ban_kinh*ban_kinh*PI ;
+            return dientich;
+        }
+        function perimeter(duong_kinh){
+            duong_kinh = +prompt("nhập vào dường kính");
+            const PI = Math.PI;
+           let chuvi = (duong_kinh * PI);
+            return chuvi;
+        }
+        alert(arae());
+        alert(perimeter());        
+    </script>
+</body>
+</html>

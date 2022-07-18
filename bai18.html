@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+    <script>
+        let Meters = prompt("Nhập Meters");
+        let feet = prompt("Nhập Feet");
+
+       function feetToMeters(feet) {
+       let meters = feet * 0.305 ;
+        return meters;
+       }
+       function metersTofeet(Meters) {
+       let feet = meters * 3.279;
+        return feet;
+       }
+       document.write(feet + "feet" + "=" + footToMeters(feet) + "meters" + "<br>");
+       document.write(meters + "meters" + "=" + metersTofeet(meters) + "feet");
+    </script>
+</body>
+</html>
