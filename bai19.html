@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết một lớp các đối tượng hình chữ nhật lấy tên là Rectangle, mỗi hình chữ nhật đều có những đặc tính sau:
+
+        + Có thông số chiều dài (int).
+        
+        + Có thông số chiều rộng (int).
+        
+        + Có tính năng tính diện tích.
+        
+        + Có tính năng tính chu vi.
+        
+        + Có tính năng hiển thị trực quan hình chữ nhật bằng cách vẽ lên canvas
+        
+        Sử dụng lớp Rectangle vừa định nghĩa để viết một chương trình JavaScript  với kịch bản như sau:
+        
+        Khai báo và khởi tạo một đối tượng kiểu Rectangle.
+        
+        Hiển thị hình chữ nhật trên màn hình web
+        
+        Thay đổi chiều dài và chiều rộng của hình chữ nhật.
+        
+        In ra màn hình diện tích và chu vi của hình chữ nhật đó.
+        
+        </title>
+</head>
+<body>
+    <script>
+    class Rectangle {
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+       getArea() {
+           return this.chieuDai * this.chieuRong;
+
+       }
+       getperimeter() {
+           return 2 * (this.chieuDai + this.chieuRong);
+       }
+       
+    }
+   let rectangle1 = new Rectangle(3, 5);
+   let rectangle2 = new Rectangle(4, 7);
+
+  let ketqua1 = rectangle1.getArea();
+  document.write("Diện Tích là: " + ketqua1);
+  document.write("<br>")
+  let ketqua2 = rectangle2.getperimeter();
+  document.write("Chu Vi là: " + ketqua2);
+ 
+    </script>
+</body>
+</html>
