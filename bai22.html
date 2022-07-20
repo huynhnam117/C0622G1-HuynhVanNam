@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết một ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva.
+         Adam và Eva là những con người đầu tiên, trong vườn địa đàng có một cây táo ra những quả táo chín mọng. 
+         Adam và Eva lấy một quả táo và ăn, mỗi người ăn một miếng táo cho đến khi hết!</title>
+</head>
+<body>
+    <script>
+       class Apple{
+    constructor(weight) {
+        this.weight = weight;
+    }
+    getWeight() {
+        return this.weight;
+    }
+
+    setWeight(weight) {
+        this.weight = weight;
+    };
+
+    isEmpty() {
+        if(this.weight <= 0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    decreaseApple(){
+        if(this.isEmpty()){
+            alert("Táo đã hết rồi");
+        }else {
+            this.weight--;
+        }
+    }
+}
+
+class Human{
+    constructor(name,gender,weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+    }
+    getName(){
+        return this.name;
+    }
+    setName(name){
+        this.name = name;
+    }
+    getWeight(){
+        return this.weight;
+    }
+
+    isMale(){
+        if(this.gender == 1){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    getGender(){
+        if(this.isMale()){
+            return "Male";
+        }else {
+            return "Female";
+        }
+    }
+
+    setWeight(weight){
+        this.weight = weight;
+    }
+
+    say(string) {
+        console.log(string);
+    }
+
+    checkApple(apple){
+        return apple.isEmpty();
+    }
+
+    eat(apple){
+        if(apple.getWeight() > 0){
+            apple.decreaseApple(); 
+            this.weight++; 
+        }else {
+            alert("Táo đã hết");
+        }
+    }
+
+    getInfo(human){
+        alert(human.name + " " +human.weight + " " +human.getGender());
+    }
+}
+
+
+let adam = new Human("adam", 1,23);
+let eva = new Human("eva", 2, 63);
+let apple_1 = new Apple(10);
+
+
+
+adam.say("I am Adam" + "<br>");
+eva.say("I am Eva" + "<br>");
+
+
+ while(apple_1.isEmpty() !== true) {
+    document.write("Adam ăn táo" + "<br>");
+    adam.eat(apple_1);
+
+    document.write("Quả táo còn: " + "<br>");
+    document.write(apple_1.getWeight() + " đơn vị" + "<br>");
+    document.write( "Cân nặng của Adm là: " + adam.getWeight() + " đơn vị" + "<br>");
+    document.write("<br>");
+    document.write("Quả táo còn: " + "<br>");
+    document.write(apple_1.getWeight() + " đơn vị" + "<br>");
+    document.write( "Cân nặng là: " + eva.getWeight() + " đơn vị" + "<br>");
+}
+
+    </script>
+</body>
+</html>
