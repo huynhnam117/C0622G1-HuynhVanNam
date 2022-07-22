@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>: Cho mảng a chỉ chứa các số nguyên
+        Xây dựng mảng b là prefix sums của mảng a cụ thể theo công thức:
+          b[0]   = a[0]
+          b[1]   = a[0] + a[1]
+          b[2]   = a[0] + a[1] + a[2]
+          ...
+          b[n - 1] = a[0] + a[1] + ... + a[n - 1]
+        </title>
+</head>
+<body></body>
+<script>
+    let a = [1,2,3];
+    let b = [];
+    let sums = 0;
+    for(let i = 0; i < a.length; i++){
+      if(sums += a[i]){
+        b.push(sums);
+      }
+      alert(b);
+    }
+   
+</script>
+</html>
