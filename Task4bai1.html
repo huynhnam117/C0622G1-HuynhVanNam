@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết một hàm chuẩn hóa xâu ký tự:
+         biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa. </title>
+</head>
+<body></body>
+    
+<script>
+let string = prompt("nhập chuỗi ký tự");
+function titleCase(string) {
+  let newstr = string.toLowerCase().split(" ");
+        for(var i = 0; i < newstr.length; i++){
+            newstr[i] = newstr[i][0].toUpperCase() + newstr[i].slice(1);
+  }
+            return newstr.join(" ");
+}
+alert("Kết Quả là: " + titleCase(string));
+</script>
+</html>
