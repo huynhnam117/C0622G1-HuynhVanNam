@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó</title>
+</head>
+<body></body>
+    <script>
+
+    let nhapKyTu = prompt("Nhập ký tự");
+    function kyTu(nhapKyTu) {
+        let arr = [];
+        for (let i = 0; i < nhapKyTu.length; i++) {
+            if (!arr.includes(nhapKyTu[i])) {
+                arr.push(nhapKyTu[i]);
+            }
+        }
+        return arr.length;
+    }
+
+    alert("Số ký tự khác nhau: " + kyTu(nhapKyTu));
+</script>
+</html>
