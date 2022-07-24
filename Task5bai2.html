@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let row = +prompt("Insert row...");
+        let col = +prompt("Insert column...");
+
+    function xuLySoNguyenTo(row,col) {
+        let arr = [];
+        let arr2 = [];
+
+        for (let i = 0; i < row; i++) {
+            arr.push([]);
+            for (let j = 0; j < col; j++) {
+                arr[i][j] = +prompt("Nhập số ở vị trí thứ " + j + " của mảng " + i);
+                if (arr[i][j] !== 1) {
+                    arr2.push(arr[i][j]);
+                }
+                for (let k = 2; k < arr[i][j]; k++) {
+                    if (arr[i][j] % k === 0) {
+                        arr2.splice(arr2.indexOf(arr[i][j]), 1);
+                        break;
+                    }
+                }
+            }
+        }
+        return arr2;
+    }
+
+    document.write("Số các số nguyên tố có trong mảng 2 chiều là: " + xuLySoNguyenTo(row,col));
+    </script>
+</body>
+</html>

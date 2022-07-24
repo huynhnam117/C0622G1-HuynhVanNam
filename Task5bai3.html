@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều</title>
+</head>
+<body>
+    <script>
+
+    let arr = [
+        [23,24,14,44],
+        [35,42,32,89], 
+    ];
+    function MinMax(arr) {
+        let total = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            let min = arr[i][0];
+            let max = arr[i][0];
+            for (let j = 0; j < arr[i].length; j++) {
+                if (min > arr[i][j]) {
+                    min = arr[i][j];
+                    
+            }
+                if (max < arr[i][j]) {
+                    max = arr[i][j];
+            }
+        }
+            total.push(min);
+            total.push(max);
+        }
+        let min_1 = total[0];
+        let max_1 = total[0];
+
+        for (let i = 0; i < 7; i++) {
+            if (min_1 > total[i]) {
+                min_1 = total[i];
+            }
+            
+        }
+        for (let i = 0; i < 7; i++) {
+            if (max_1 < total[i]) {
+                max_1 = total[i];
+            }
+           
+        }
+      document.write(max_1 + "<br>" + min_1);
+    }
+      document.write(MinMax(arr));
+    </script>
+</body>
+</html>
