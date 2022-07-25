@@ -12,9 +12,9 @@
 <script>
 let string = prompt("nhập chuỗi ký tự");
 function titleCase(string) {
-  let newstr = string.toLowerCase().split(" ");
+  let newstr = string.split(" ");
         for(var i = 0; i < newstr.length; i++){
-            newstr[i] = newstr[i][0].toUpperCase() + newstr[i].slice(1);
+            newstr[i] = newstr[i][0] + newstr[i].slice(1);
   }
             return newstr.join(" ");
 }

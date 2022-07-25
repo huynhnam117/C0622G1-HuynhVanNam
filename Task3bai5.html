@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh dấu theo thứ tự 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa), 7(thoát gọi món)
+        Khi người dùng lựa chọn 1 trong số các thức uống, chương trình sẽ hiện đơn giá của thức uống đó và cho phép người dùng nhập số lượng.
+        Cuối cùng hiển thị tổng số tiền người dùng cần phải trả.
+        Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống, kết thúc quá trình đặt thức uống khi người nhấn số 7
+        </title>
+</head>
+<body></body>
+    
+<script>
+    let arr = ['cafe', 'cam vắt', 'nước ép cà rốt', 'nước ép cà chua', 'nước lọc', 'nước dừa', 'thoát gọi món'];
+let donGia = [12000, 20000, 25000, 25000, 10000, 30000];
+let tongTien = 0;
+let goiMon;
+let soLuong;
+do {
+    goiMon = +prompt(
+                      "Gọi món: " +
+                      "1. Cafe\n" +
+                      "2. Cam vắt\n " +
+                      "3. Nước ép cà rốt\n " +
+                      "4. Nước ép cà chua\n " +
+                      "5. Nước lọc\n " +
+                      "6. Nước dừa\n " +
+                      "7. Thoát gọi món ");
+    if (goiMon === 7) {
+        break;
+    }
+    soLuong = +prompt(arr[goiMon - 1] + " có giá là: " + donGia[goiMon - 1]);
+    tongTien += (soLuong * donGia[goiMon - 1]);
+} while (goiMon !== 7);
+document.write('Tổng tiền cần thanh toán là: ' + tongTien);
+</script>
+</html>
